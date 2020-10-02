@@ -6,9 +6,19 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
     # Your code here
+
+    tickets_dict = {}
+    for ticket in tickets:
+        tickets_dict[ticket.source] = ticket.destination
+
+    route = []
+    while len(route) < length:
+        if len(route) == 0:
+            route.append(tickets_dict["NONE"])
+        route.append(tickets_dict[route[len(route)-1]])
+    
+    # I first attempted this in O(n),
+    # then I realized that O(2n) is O(n).
 
     return route
