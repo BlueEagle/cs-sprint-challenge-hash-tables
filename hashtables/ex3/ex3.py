@@ -1,8 +1,36 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
     # Your code here
+    result = []
+
+    appearance_map = {}
+    for array in arrays:
+        for item in array:
+            # New Pokemon spotted!
+            if not item in appearance_map:
+                appearance_map[item] = 0
+            
+            # That's one appearance!
+            appearance_map[item] += 1
+
+            # Check if it appears in all lists
+            if appearance_map[item] == len(arrays): result.append(item)
+
+
+    
+
+    # if len(arrays) == 0: return [] # No array found
+    # if len(arrays) == 1: return arrays[0] # Only one array found
+
+
+    # # Make an array of hash maps for searching each array
+    # array_maps = []
+    # for array in arrays[1:]:
+    #     array_maps.append(dict.fromkeys(array))
+    
+    # for n in array[0]:
+
+
+
 
     return result
 
