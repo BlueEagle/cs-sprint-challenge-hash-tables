@@ -1,11 +1,5 @@
 def get_indices_of_item_weights(weights, length, limit):
     # Your code here
-    items_found = 0
-    """
-    An item can be stored like this:
-
-    list[weight] = index # check if list[21-weight] in list
-    """
     weight_dict = {}
     for i, weight in enumerate(weights):
         # check if counter exists
