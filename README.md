@@ -23,11 +23,29 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+
+Hashing functions deterministically produce a valid index in a hash table which can be used to addess new entries, or to later access entries.
+
 2. Collision resolution
+
+Collision resolution is the concept of preventing data overwriting when a hashing function resolves the same index from different inputs. This can be done using linked lists to contain all entries that match an index.
+
 3. Performance of basic hash table operations
+
+On average, hash table operations are O(1), the worst possible case is that they can be O(n).
+
 4. Load factor
+
+When collisions occur and values stack on single indexes, this increases the likelyhood of O(n) operations. This can be mitigated by generating a new hash map of a different size and re-hashing the entries. This is an expensive operation but can greatly improve usage speeds. Load factor is the measurment used to determine when this resizing should occur.
+
 5. Automatic resizing
+
+Automatice resizing as explained partially in answer 4 is an expensive but necessary process used to optimize hash tables and improve the potential for O(1) operations.
+
 6. Various use cases for hash tables
+
+Hash tables can be used for most data stores that need to be queried quickly by a single key. This includes caching, and ticketing systems. They can be implemented in a variety of cases to optimize a solution.
+
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
